@@ -76,22 +76,20 @@ function menu() {
              /* --------------- */
    
             case 5: // 5.- División - val                                                                                        idando que no puedan ingresar 0
-                /* - variables -*/
-                var numeroUno = prompt('Ingresa el primer número: ');
-                var numeroDos = prompt('Ingresa el segundo número: ');
-            
-                function division(numeroUno, numeroDos) {
-                    var numeroUnoInt = parseInt(numeroUno);
-                    var numeroDosInt = parseInt(numeroDos);
+                var numero1 = prompt('Ingresa el primer número: ');
+                var numero2 = prompt('Ingresa el segundo número: ');
+
+                if (numero2 == 0) {
+                    var numero2 = prompt('El número es cero. Debe ingresar otro valor');
+                }
+                //division
+                function division(numero1, numero2) {
+                    var numeroUnoInt = parseInt(numero1);
+                    var numeroDosInt = parseInt(numero2);
                     var resultado = numeroUnoInt / numeroDosInt;
                     alert('El resultado es: ' + resultado); 
                 }
-                division(numeroUno, numeroDos);
-
-
-            /* --------------- */
-
-
+                division(numero1, numero2);
 
                 break;
         
